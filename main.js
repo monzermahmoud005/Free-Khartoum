@@ -1,4 +1,3 @@
-
 const config = {
     type: Phaser.AUTO,
     width: 800,
@@ -22,10 +21,11 @@ const game = new Phaser.Game(config);
 let player, cursors, enemies;
 
 function preload() {
-    this.load.image('background', 'assets/background.png');
-    this.load.image('ground', 'assets/ground.png');
-    this.load.spritesheet('player', 'assets/player.png', { frameWidth: 32, frameHeight: 48 });
-    this.load.image('enemy', 'assets/enemy.png');
+    // تعديل المسارات إلى نفس المجلد
+    this.load.image('background', 'background.png');
+    this.load.image('ground', 'ground.png');
+    this.load.spritesheet('player', 'player.png', { frameWidth: 32, frameHeight: 48 });
+    this.load.image('enemy', 'enemy.png');
 }
 
 function create() {
